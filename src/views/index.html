@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Calculator | Snadbox | TS</title>
+
+    <script src="../build/index.js" defer></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: .4s all ease;
+        }
+
+        body {
+            background: #242424;
+            display: flex;
+            justify-content: center;
+        }
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+            margin-top: 2rem;
+            padding: 2rem;
+            text-align: center;
+            background: #eee;
+            border-radius: 4px;
+            box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .2);
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .title span {
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgb(79, 168, 240);
+        }
+
+        input {
+            padding: .5rem;
+            margin: 1rem;
+            border: none;
+            border-bottom: 1px solid rgb(79, 168, 240);
+            background: transparent;
+        }
+
+        input:focus {
+            outline: none;
+            border-radius: 4px;
+            border-bottom: none;
+            animation: glow 1s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                border: 1px solid rgb(79, 168, 240);
+            }
+            50% {
+                border: 1px solid transparent;
+            }
+            100% {
+                border: 1px solid rgb(79, 168, 240);
+            }
+        }
+
+        #compute {
+            width: 100%;
+            padding: .7rem;
+            background: rgb(79, 168, 240);
+            color: #eee;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        #compute:hover {
+            box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, .2);
+            transform: translateY(-4px);
+        }
+
+        .output {
+            margin: 1rem;
+            border-radius: 4px;
+            background: #242424;
+            color: #e2e2e2;
+            padding: 1rem;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <main id="root">
+
+        <h2 class="title">
+            <span>
+                Mean    
+            </span>
+             Calculator
+        </h2>
+
+        <input type="text" placeholder="Enter number..." id="num1">
+        <input type="text" placeholder="Enter number..." id="num2">
+
+        <button id="compute">
+            Compute
+        </button>
+
+    </main>
+</body>
+</html>
